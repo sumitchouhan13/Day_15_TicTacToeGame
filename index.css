@@ -1,0 +1,25 @@
+body {
+  background-color: #f7cac9;
+  margin: 0;
+}
+
+.board {
+  width: 100vw;
+  height: 60vh;
+  display: grid;
+  justify-content: center;
+  align-content: center;
+  grid-template-columns: repeat(3, auto);
+}
+
+.cell {
+  width: 100px;
+  height: 100px;
+  align-items: center;
+  justify-content: center;
+  display: flex;
+  border: 5px solid black;
+  cursor: pointer;
+  color: #FF851B;
+  font-size: 80px;
+}

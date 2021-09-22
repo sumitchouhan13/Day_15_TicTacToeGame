@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>TicTaeToeGame</title>
+    <link rel="stylesheet" href="index.css" />
+    <script>
+      // This is normal function
+      // var turn = true;
+      // //This function is to place the desired output
+      // function placeText(text) {
+      //   document.getElementById(text).innerText = turn ? "X" : "O";
+      //   turn = !turn;
+      //   disable(text);
+      // }
+      //This function is to disable click after clicking on the desired block
+      function disable(text) {
+        document.getElementById(text).style.pointerEvents = "none";
+      }
+      var turn = true;
+      //This is by DOM manipulation
+      function placeText(text) {
+        var objTo = document.getElementById(text);
+        var divtest = document.createElement("div");
+        divtest.innerHTML = turn ? "X" : "O";
+        objTo.appendChild(divtest);
+        turn = !turn;
+        disable(text);
+      }
+    </script>
+  </head>
+  <body>
+    <div>
+      <div
+        style="
+          border-top: 4px solid;
+          border-bottom: 4px solid;
+          text-align: center;
+          background-color: #6b5b95;
+        "
+      >
+        <h1 style="color: #001f3f"><b>TIC TAC TOE GAME</b></h1>
+      </div>
+      <div style="margin-top: 20px">
+        <h1 style="text-align: center; color: #dd4124">INSTRUCTIONS</h1>
+        <h4 style="text-align: center; color: brown; font-size: 20px">
+          1 . First Player : X ; 2 . Second Player : O
+        </h4>
+      </div>
+      <div class="board" id="board">
+        <div class="cell" id="1" onclick="placeText(id)"></div>
+        <div class="cell" id="2" onclick="placeText(id)"></div>
+        <div class="cell" id="3" onclick="placeText(id)"></div>
+        <div class="cell" id="4" onclick="placeText(id)"></div>
+        <div class="cell" id="5" onclick="placeText(id)"></div>
+        <div class="cell" id="6" onclick="placeText(id)"></div>
+        <div class="cell" id="7" onclick="placeText(id)"></div>
+        <div class="cell" id="8" onclick="placeText(id)"></div>
+        <div class="cell" id="9" onclick="placeText(id)"></div>
+      </div>
+    </div>
+  </body>
+</html>
